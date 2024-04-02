@@ -1,5 +1,6 @@
 import PokemonCard from "./components/PokemonCard"
 import { useState } from "react";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -44,13 +45,13 @@ function App() {
     }
   };
 
-
-
   return (
     <div>
       <PokemonCard pokemon={pokemon} />
-      <button onClick={handlePreviousClick}>Précédent</button>
-      <button onClick={handleNextClick}>Suivant</button>
+      <NavBar
+        pokemon={pokemon}
+        onPreviousClick={handlePreviousClick}
+        onNextClick={handleNextClick} />
     </div>
   );
 }
