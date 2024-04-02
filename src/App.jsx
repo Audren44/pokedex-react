@@ -49,9 +49,7 @@ function App() {
     <div>
       <PokemonCard pokemon={pokemon} />
       <NavBar
-        pokemon={pokemon}
-        onPreviousClick={handlePreviousClick}
-        onNextClick={handleNextClick} />
+        pokemonList={pokemonList} setPokemonIndex={setPokemonIndex} />
     </div>
   );
 }
